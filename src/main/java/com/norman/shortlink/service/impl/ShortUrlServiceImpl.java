@@ -16,6 +16,8 @@ import org.springframework.util.StringUtils;
 import java.text.MessageFormat;
 import java.util.List;
 import java.util.Optional;
+import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -57,7 +59,7 @@ public class ShortUrlServiceImpl implements ShortUrlService {
 
         if (saved) {
             stringRedisTemplate.opsForValue().setIfAbsent(MessageFormat.format(SHORT_URL_PATTERN, shortUrl.getTag()),
-                    shortUrl.getSourceUrl(), timeoutMinutes, TimeUnit.MINUTES);
+                    shortUrl.getSourceUrl(), timeoutMinutes + ThreadLocalRandom.current().nextLong(0,5), TimeUnit.MINUTES);
         }
         sw.stop("save short url", shortUrl.getTag());
 
@@ -73,7 +75,7 @@ public class ShortUrlServiceImpl implements ShortUrlService {
 
 
         if (!StringUtils.isEmpty(url)) {
-            stringRedisTemplate.expire(tagKey, timeoutMinutes, TimeUnit.MINUTES);
+            stringRedisTemplate.expire(tagKey, timeoutMinutes + ThreadLocalRandom.current().nextLong(0,5), TimeUnit.MINUTES);
             sw.stop("get short url from redis", tag);
             return Optional.of(ShortUrl.builder().tag(tag).sourceUrl(url).build());
         }
@@ -81,7 +83,7 @@ public class ShortUrlServiceImpl implements ShortUrlService {
         final Optional<ShortUrl> raw = shortUrlDao.getByTag(tag);
         raw.ifPresent(shortUrl -> {
             stringRedisTemplate.opsForValue().setIfAbsent(MessageFormat.format(SHORT_URL_PATTERN, shortUrl.getTag()),
-                    shortUrl.getSourceUrl(), timeoutMinutes, TimeUnit.MINUTES);
+                    shortUrl.getSourceUrl(), timeoutMinutes + ThreadLocalRandom.current().nextLong(0,5), TimeUnit.MINUTES);
             log.info("save short url {} to redis.", shortUrl);
         });
 
