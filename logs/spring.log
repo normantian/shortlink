@@ -1,0 +1,346 @@
+2019-06-12 09:36:05.869  INFO 96733 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-06-12 09:36:05.876  INFO 96733 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-06-12 09:36:05.900  INFO 96733 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 23 ms
+2019-06-12 09:36:06.109  INFO 96733 --- [http-nio-8090-exec-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2019-06-12 09:36:06.110  INFO 96733 --- [http-nio-8090-exec-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2019-06-12 09:36:06.281  INFO 96733 --- [http-nio-8090-exec-1] c.n.s.service.impl.ShortUrlServiceImpl   : save short url ShortUrl(id=2, tag=1d3cf920, sourceUrl=https://www.jianshu.com/p/062c2c6e21da?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation) to redis.
+2019-06-12 09:36:06.282  INFO 96733 --- [http-nio-8090-exec-1] org.perf4j.TimingLogger                  : start[1560303365968] time[313] tag[get short url from db] message[1d3cf920]
+2019-06-12 09:36:06.282  INFO 96733 --- [http-nio-8090-exec-1] c.n.s.controller.ShortUrlController      : URL Retrieved: https://www.jianshu.com/p/062c2c6e21da?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation
+2019-06-12 10:01:06.422  INFO 96733 --- [http-nio-8090-exec-3] c.n.s.controller.ShortUrlController      : URL Id generated: 0bd01d81
+2019-06-12 10:01:06.422  INFO 96733 --- [http-nio-8090-exec-2] c.n.s.controller.ShortUrlController      : URL Id generated: 77a8c18e
+2019-06-12 10:01:06.434  INFO 96733 --- [http-nio-8090-exec-4] c.n.s.controller.ShortUrlController      : URL Id generated: f572f64b
+2019-06-12 10:01:06.499  INFO 96733 --- [http-nio-8090-exec-4] org.perf4j.TimingLogger                  : start[1560304866466] time[33] tag[save short url] message[f572f64b]
+2019-06-12 10:01:06.499  INFO 96733 --- [http-nio-8090-exec-2] org.perf4j.TimingLogger                  : start[1560304866466] time[33] tag[save short url] message[77a8c18e]
+2019-06-12 10:01:06.500  INFO 96733 --- [http-nio-8090-exec-3] org.perf4j.TimingLogger                  : start[1560304866466] time[33] tag[save short url] message[0bd01d81]
+2019-06-12 10:01:06.596  INFO 96733 --- [http-nio-8090-exec-5] c.n.s.controller.ShortUrlController      : URL Id generated: 474107db
+2019-06-12 10:01:06.632  INFO 96733 --- [http-nio-8090-exec-5] org.perf4j.TimingLogger                  : start[1560304866625] time[6] tag[save short url] message[474107db]
+2019-06-12 10:01:06.721  INFO 96733 --- [http-nio-8090-exec-10] c.n.s.controller.ShortUrlController      : URL Id generated: b8e1d592
+2019-06-12 10:01:06.726  INFO 96733 --- [http-nio-8090-exec-10] org.perf4j.TimingLogger                  : start[1560304866722] time[4] tag[save short url] message[b8e1d592]
+2019-06-12 10:01:06.866  INFO 96733 --- [http-nio-8090-exec-2] c.n.s.controller.ShortUrlController      : URL Id generated: c8675dbd
+2019-06-12 10:01:06.870  INFO 96733 --- [http-nio-8090-exec-2] org.perf4j.TimingLogger                  : start[1560304866867] time[3] tag[save short url] message[c8675dbd]
+2019-06-12 10:01:07.005  INFO 96733 --- [http-nio-8090-exec-4] c.n.s.controller.ShortUrlController      : URL Id generated: c35b6263
+2019-06-12 10:01:07.010  INFO 96733 --- [http-nio-8090-exec-4] org.perf4j.TimingLogger                  : start[1560304867006] time[3] tag[save short url] message[c35b6263]
+2019-06-12 10:05:28.416  INFO 96733 --- [http-nio-8090-exec-5] c.n.s.controller.ShortUrlController      : URL Id generated: 77a8c18e
+2019-06-12 10:05:28.423  INFO 96733 --- [http-nio-8090-exec-5] c.n.s.controller.ShortUrlController      : URL Id generated: 0bd01d81
+2019-06-12 10:05:28.426  INFO 96733 --- [http-nio-8090-exec-7] c.n.s.controller.ShortUrlController      : URL Id generated: f572f64b
+2019-06-12 10:05:28.558  INFO 96733 --- [http-nio-8090-exec-9] c.n.s.controller.ShortUrlController      : URL Id generated: 474107db
+2019-06-12 10:05:28.562  INFO 96733 --- [http-nio-8090-exec-10] c.n.s.controller.ShortUrlController      : URL Id generated: b8e1d592
+2019-06-12 10:05:28.567  INFO 96733 --- [http-nio-8090-exec-1] c.n.s.controller.ShortUrlController      : URL Id generated: c8675dbd
+2019-06-12 10:05:28.702  INFO 96733 --- [http-nio-8090-exec-6] c.n.s.controller.ShortUrlController      : URL Id generated: c35b6263
+2019-06-12 10:05:28.707  INFO 96733 --- [http-nio-8090-exec-4] c.n.s.controller.ShortUrlController      : URL Id generated: 480ca384
+2019-06-12 10:05:28.717  INFO 96733 --- [http-nio-8090-exec-4] org.perf4j.TimingLogger                  : start[1560305128710] time[7] tag[save short url] message[480ca384]
+2019-06-12 10:05:28.739  INFO 96733 --- [http-nio-8090-exec-3] c.n.s.controller.ShortUrlController      : URL Id generated: e028b488
+2019-06-12 10:05:28.747  INFO 96733 --- [http-nio-8090-exec-3] org.perf4j.TimingLogger                  : start[1560305128743] time[3] tag[save short url] message[e028b488]
+2019-06-12 10:05:28.846  INFO 96733 --- [http-nio-8090-exec-7] c.n.s.controller.ShortUrlController      : URL Id generated: bd089abe
+2019-06-12 10:05:28.851  INFO 96733 --- [http-nio-8090-exec-7] org.perf4j.TimingLogger                  : start[1560305128847] time[3] tag[save short url] message[bd089abe]
+2019-06-12 10:05:28.871  INFO 96733 --- [http-nio-8090-exec-8] c.n.s.controller.ShortUrlController      : URL Id generated: 08a06c6b
+2019-06-12 10:05:28.885  INFO 96733 --- [http-nio-8090-exec-8] org.perf4j.TimingLogger                  : start[1560305128881] time[4] tag[save short url] message[08a06c6b]
+2019-06-12 10:05:28.910  INFO 96733 --- [http-nio-8090-exec-9] c.n.s.controller.ShortUrlController      : URL Id generated: c96a08cc
+2019-06-12 10:05:28.918  INFO 96733 --- [http-nio-8090-exec-9] org.perf4j.TimingLogger                  : start[1560305128913] time[5] tag[save short url] message[c96a08cc]
+2019-06-12 10:05:28.991  INFO 96733 --- [http-nio-8090-exec-1] c.n.s.controller.ShortUrlController      : URL Id generated: f68f2b54
+2019-06-12 10:05:28.995  INFO 96733 --- [http-nio-8090-exec-1] org.perf4j.TimingLogger                  : start[1560305128992] time[3] tag[save short url] message[f68f2b54]
+2019-06-12 10:05:29.016  INFO 96733 --- [http-nio-8090-exec-2] c.n.s.controller.ShortUrlController      : URL Id generated: cc8580d1
+2019-06-12 10:05:29.022  INFO 96733 --- [http-nio-8090-exec-2] org.perf4j.TimingLogger                  : start[1560305129019] time[2] tag[save short url] message[cc8580d1]
+2019-06-12 10:05:29.040  INFO 96733 --- [http-nio-8090-exec-6] c.n.s.controller.ShortUrlController      : URL Id generated: 5856f612
+2019-06-12 10:05:29.045  INFO 96733 --- [http-nio-8090-exec-6] org.perf4j.TimingLogger                  : start[1560305129041] time[4] tag[save short url] message[5856f612]
+2019-06-12 10:05:29.129  INFO 96733 --- [http-nio-8090-exec-3] c.n.s.controller.ShortUrlController      : URL Id generated: af0217a5
+2019-06-12 10:05:29.133  INFO 96733 --- [http-nio-8090-exec-3] org.perf4j.TimingLogger                  : start[1560305129129] time[3] tag[save short url] message[af0217a5]
+2019-06-12 10:05:29.149  INFO 96733 --- [http-nio-8090-exec-5] c.n.s.controller.ShortUrlController      : URL Id generated: 65f8483c
+2019-06-12 10:05:29.153  INFO 96733 --- [http-nio-8090-exec-5] org.perf4j.TimingLogger                  : start[1560305129150] time[2] tag[save short url] message[65f8483c]
+2019-06-12 10:05:29.171  INFO 96733 --- [http-nio-8090-exec-7] c.n.s.controller.ShortUrlController      : URL Id generated: 2a672c72
+2019-06-12 10:05:29.177  INFO 96733 --- [http-nio-8090-exec-7] org.perf4j.TimingLogger                  : start[1560305129173] time[3] tag[save short url] message[2a672c72]
+2019-06-12 10:05:29.277  INFO 96733 --- [http-nio-8090-exec-9] c.n.s.controller.ShortUrlController      : URL Id generated: 37666e5a
+2019-06-12 10:05:29.282  INFO 96733 --- [http-nio-8090-exec-9] org.perf4j.TimingLogger                  : start[1560305129278] time[3] tag[save short url] message[37666e5a]
+2019-06-12 10:05:29.301  INFO 96733 --- [http-nio-8090-exec-10] c.n.s.controller.ShortUrlController      : URL Id generated: 1322bbfc
+2019-06-12 10:05:29.305  INFO 96733 --- [http-nio-8090-exec-10] org.perf4j.TimingLogger                  : start[1560305129302] time[2] tag[save short url] message[1322bbfc]
+2019-06-12 10:05:29.321  INFO 96733 --- [http-nio-8090-exec-1] c.n.s.controller.ShortUrlController      : URL Id generated: 8f80f8e2
+2019-06-12 10:05:29.327  INFO 96733 --- [http-nio-8090-exec-1] org.perf4j.TimingLogger                  : start[1560305129323] time[3] tag[save short url] message[8f80f8e2]
+2019-06-12 10:08:47.022  INFO 96733 --- [http-nio-8090-exec-6] c.n.s.controller.ShortUrlController      : URL Id generated: 77a8c18e
+2019-06-12 10:08:47.167  INFO 96733 --- [http-nio-8090-exec-3] c.n.s.controller.ShortUrlController      : URL Id generated: 0bd01d81
+2019-06-12 10:08:47.313  INFO 96733 --- [http-nio-8090-exec-7] c.n.s.controller.ShortUrlController      : URL Id generated: f572f64b
+2019-06-12 10:08:47.453  INFO 96733 --- [http-nio-8090-exec-9] c.n.s.controller.ShortUrlController      : URL Id generated: 474107db
+2019-06-12 10:08:47.595  INFO 96733 --- [http-nio-8090-exec-1] c.n.s.controller.ShortUrlController      : URL Id generated: b8e1d592
+2019-06-12 10:08:47.740  INFO 96733 --- [http-nio-8090-exec-6] c.n.s.controller.ShortUrlController      : URL Id generated: c8675dbd
+2019-06-12 10:08:47.883  INFO 96733 --- [http-nio-8090-exec-3] c.n.s.controller.ShortUrlController      : URL Id generated: c35b6263
+2019-06-12 10:09:33.811  INFO 96733 --- [Thread-9] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-06-12 10:09:34.953  INFO 96733 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-06-12 10:09:34.956  INFO 96733 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-06-12 10:09:47.122  INFO 4279 --- [restartedMain] c.norman.shortlink.ShortlinkApplication  : Starting ShortlinkApplication on tianfeideMacBook-Pro.local with PID 4279 (/Users/tianfei/IdeaProjects/github/shortlink/build/classes/java/main started by tianfei in /Users/tianfei/IdeaProjects/github/shortlink)
+2019-06-12 10:09:47.125  INFO 4279 --- [restartedMain] c.norman.shortlink.ShortlinkApplication  : No active profile set, falling back to default profiles: default
+2019-06-12 10:09:47.174  INFO 4279 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-06-12 10:09:47.174  INFO 4279 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-06-12 10:09:48.256  INFO 4279 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-12 10:09:48.260  INFO 4279 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-06-12 10:09:48.305  INFO 4279 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23ms. Found 0 repository interfaces.
+2019-06-12 10:09:48.793  INFO 4279 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$31f1756f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-12 10:09:49.241  INFO 4279 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2019-06-12 10:09:49.348  INFO 4279 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-12 10:09:49.348  INFO 4279 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.19]
+2019-06-12 10:09:49.457  INFO 4279 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-12 10:09:49.457  INFO 4279 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2283 ms
+2019-06-12 10:09:50.399  INFO 4279 --- [restartedMain] c.n.shortlink.config.BloomTagFilter      : init bloom ...
+2019-06-12 10:09:50.420  INFO 4279 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-06-12 10:09:50.640  INFO 4279 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-06-12 10:09:50.669  INFO 4279 --- [restartedMain] c.n.shortlink.config.BloomTagFilter      : init bloom finish. size 0
+2019-06-12 10:09:50.958  INFO 4279 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-12 10:09:51.537  INFO 4279 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-06-12 10:09:51.551  INFO 4279 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2019-06-12 10:09:51.658  INFO 4279 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2019-06-12 10:09:51.662  INFO 4279 --- [restartedMain] c.norman.shortlink.ShortlinkApplication  : Started ShortlinkApplication in 5.088 seconds (JVM running for 5.852)
+2019-06-12 10:10:19.221  INFO 4279 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-06-12 10:10:19.222  INFO 4279 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-06-12 10:10:19.232  INFO 4279 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2019-06-12 10:10:19.302  INFO 4279 --- [http-nio-8090-exec-2] c.n.s.controller.ShortUrlController      : URL Id generated: 0bd01d81
+2019-06-12 10:10:19.302  INFO 4279 --- [http-nio-8090-exec-1] c.n.s.controller.ShortUrlController      : URL Id generated: 77a8c18e
+2019-06-12 10:10:19.441  INFO 4279 --- [http-nio-8090-exec-3] c.n.s.controller.ShortUrlController      : URL Id generated: f572f64b
+2019-06-12 10:10:19.497  INFO 4279 --- [http-nio-8090-exec-2] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2019-06-12 10:10:19.499  INFO 4279 --- [http-nio-8090-exec-2] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2019-06-12 10:10:19.584  INFO 4279 --- [http-nio-8090-exec-4] c.n.s.controller.ShortUrlController      : URL Id generated: 474107db
+2019-06-12 10:10:19.682  INFO 4279 --- [http-nio-8090-exec-2] org.perf4j.TimingLogger                  : start[1560305419318] time[364] tag[save short url] message[0bd01d81]
+2019-06-12 10:10:19.682  INFO 4279 --- [http-nio-8090-exec-4] org.perf4j.TimingLogger                  : start[1560305419588] time[94] tag[save short url] message[474107db]
+2019-06-12 10:10:19.682  INFO 4279 --- [http-nio-8090-exec-3] org.perf4j.TimingLogger                  : start[1560305419443] time[238] tag[save short url] message[f572f64b]
+2019-06-12 10:10:19.684  INFO 4279 --- [http-nio-8090-exec-1] org.perf4j.TimingLogger                  : start[1560305419318] time[366] tag[save short url] message[77a8c18e]
+2019-06-12 10:10:19.744  INFO 4279 --- [http-nio-8090-exec-5] c.n.s.controller.ShortUrlController      : URL Id generated: b8e1d592
+2019-06-12 10:10:19.754  INFO 4279 --- [http-nio-8090-exec-6] c.n.s.controller.ShortUrlController      : URL Id generated: e028b488
+2019-06-12 10:10:19.748  INFO 4279 --- [http-nio-8090-exec-4] c.n.s.controller.ShortUrlController      : URL Id generated: c8675dbd
+2019-06-12 10:10:19.749  INFO 4279 --- [http-nio-8090-exec-3] c.n.s.controller.ShortUrlController      : URL Id generated: c35b6263
+2019-06-12 10:10:19.749  INFO 4279 --- [http-nio-8090-exec-2] c.n.s.controller.ShortUrlController      : URL Id generated: 480ca384
+2019-06-12 10:10:19.770  INFO 4279 --- [http-nio-8090-exec-5] org.perf4j.TimingLogger                  : start[1560305419761] time[8] tag[save short url] message[b8e1d592]
+2019-06-12 10:10:19.770  INFO 4279 --- [http-nio-8090-exec-3] org.perf4j.TimingLogger                  : start[1560305419762] time[8] tag[save short url] message[c35b6263]
+2019-06-12 10:10:19.770  INFO 4279 --- [http-nio-8090-exec-6] org.perf4j.TimingLogger                  : start[1560305419761] time[9] tag[save short url] message[e028b488]
+2019-06-12 10:10:19.770  INFO 4279 --- [http-nio-8090-exec-4] org.perf4j.TimingLogger                  : start[1560305419761] time[8] tag[save short url] message[c8675dbd]
+2019-06-12 10:10:19.784  INFO 4279 --- [http-nio-8090-exec-2] org.perf4j.TimingLogger                  : start[1560305419763] time[20] tag[save short url] message[480ca384]
+2019-06-12 10:10:19.794  INFO 4279 --- [http-nio-8090-exec-7] c.n.s.controller.ShortUrlController      : URL Id generated: bd089abe
+2019-06-12 10:10:19.809  INFO 4279 --- [http-nio-8090-exec-8] c.n.s.controller.ShortUrlController      : URL Id generated: c96a08cc
+2019-06-12 10:10:19.810  INFO 4279 --- [http-nio-8090-exec-10] c.n.s.controller.ShortUrlController      : URL Id generated: 08a06c6b
+2019-06-12 10:10:19.814  INFO 4279 --- [http-nio-8090-exec-7] org.perf4j.TimingLogger                  : start[1560305419811] time[3] tag[save short url] message[bd089abe]
+2019-06-12 10:10:19.811  INFO 4279 --- [http-nio-8090-exec-9] c.n.s.controller.ShortUrlController      : URL Id generated: f68f2b54
+2019-06-12 10:10:19.830  INFO 4279 --- [http-nio-8090-exec-1] c.n.s.controller.ShortUrlController      : URL Id generated: cc8580d1
+2019-06-12 10:10:19.839  INFO 4279 --- [http-nio-8090-exec-8] org.perf4j.TimingLogger                  : start[1560305419826] time[13] tag[save short url] message[c96a08cc]
+2019-06-12 10:10:19.840  INFO 4279 --- [http-nio-8090-exec-9] org.perf4j.TimingLogger                  : start[1560305419827] time[12] tag[save short url] message[f68f2b54]
+2019-06-12 10:10:19.846  INFO 4279 --- [http-nio-8090-exec-10] org.perf4j.TimingLogger                  : start[1560305419826] time[19] tag[save short url] message[08a06c6b]
+2019-06-12 10:10:19.847  INFO 4279 --- [http-nio-8090-exec-5] c.n.s.controller.ShortUrlController      : URL Id generated: 5856f612
+2019-06-12 10:10:19.853  INFO 4279 --- [http-nio-8090-exec-1] org.perf4j.TimingLogger                  : start[1560305419850] time[2] tag[save short url] message[cc8580d1]
+2019-06-12 10:10:19.853  INFO 4279 --- [http-nio-8090-exec-5] org.perf4j.TimingLogger                  : start[1560305419850] time[3] tag[save short url] message[5856f612]
+2019-06-12 10:10:19.871  INFO 4279 --- [http-nio-8090-exec-4] c.n.s.controller.ShortUrlController      : URL Id generated: af0217a5
+2019-06-12 10:10:19.887  INFO 4279 --- [http-nio-8090-exec-4] org.perf4j.TimingLogger                  : start[1560305419882] time[4] tag[save short url] message[af0217a5]
+2019-06-12 10:10:19.921  INFO 4279 --- [http-nio-8090-exec-7] c.n.s.controller.ShortUrlController      : URL Id generated: 65f8483c
+2019-06-12 10:10:19.925  INFO 4279 --- [http-nio-8090-exec-7] org.perf4j.TimingLogger                  : start[1560305419922] time[3] tag[save short url] message[65f8483c]
+2019-06-12 10:10:19.945  INFO 4279 --- [http-nio-8090-exec-9] c.n.s.controller.ShortUrlController      : URL Id generated: 2a672c72
+2019-06-12 10:10:19.950  INFO 4279 --- [http-nio-8090-exec-9] org.perf4j.TimingLogger                  : start[1560305419947] time[2] tag[save short url] message[2a672c72]
+2019-06-12 10:10:20.010  INFO 4279 --- [http-nio-8090-exec-6] c.n.s.controller.ShortUrlController      : URL Id generated: 37666e5a
+2019-06-12 10:10:20.014  INFO 4279 --- [http-nio-8090-exec-6] org.perf4j.TimingLogger                  : start[1560305420011] time[3] tag[save short url] message[37666e5a]
+2019-06-12 10:10:20.034  INFO 4279 --- [http-nio-8090-exec-2] c.n.s.controller.ShortUrlController      : URL Id generated: 1322bbfc
+2019-06-12 10:10:20.039  INFO 4279 --- [http-nio-8090-exec-2] org.perf4j.TimingLogger                  : start[1560305420036] time[2] tag[save short url] message[1322bbfc]
+2019-06-12 10:10:20.060  INFO 4279 --- [http-nio-8090-exec-5] c.n.s.controller.ShortUrlController      : URL Id generated: 8f80f8e2
+2019-06-12 10:10:20.065  INFO 4279 --- [http-nio-8090-exec-5] org.perf4j.TimingLogger                  : start[1560305420061] time[3] tag[save short url] message[8f80f8e2]
+2019-06-12 10:15:17.436  WARN 4279 --- [http-nio-8090-exec-4] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/77a8c18e]
+2019-06-12 10:15:17.493  WARN 4279 --- [http-nio-8090-exec-8] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/0bd01d81]
+2019-06-12 10:15:17.498  WARN 4279 --- [http-nio-8090-exec-3] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/f572f64b]
+2019-06-12 10:15:17.503  WARN 4279 --- [http-nio-8090-exec-7] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/474107db]
+2019-06-12 10:15:17.507  WARN 4279 --- [http-nio-8090-exec-9] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/b8e1d592]
+2019-06-12 10:15:17.511  WARN 4279 --- [http-nio-8090-exec-10] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/c8675dbd]
+2019-06-12 10:15:17.516  WARN 4279 --- [http-nio-8090-exec-6] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/e028b488]
+2019-06-12 10:15:17.519  WARN 4279 --- [http-nio-8090-exec-2] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/c35b6263]
+2019-06-12 10:15:17.523  WARN 4279 --- [http-nio-8090-exec-5] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/480ca384]
+2019-06-12 10:15:17.527  WARN 4279 --- [http-nio-8090-exec-1] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/bd089abe]
+2019-06-12 10:15:17.579  WARN 4279 --- [http-nio-8090-exec-8] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/c96a08cc]
+2019-06-12 10:15:17.583  WARN 4279 --- [http-nio-8090-exec-3] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/08a06c6b]
+2019-06-12 10:15:17.587  WARN 4279 --- [http-nio-8090-exec-7] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/f68f2b54]
+2019-06-12 10:15:17.590  WARN 4279 --- [http-nio-8090-exec-9] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/5856f612]
+2019-06-12 10:15:17.594  WARN 4279 --- [http-nio-8090-exec-10] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/cc8580d1]
+2019-06-12 10:15:17.597  WARN 4279 --- [http-nio-8090-exec-6] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/af0217a5]
+2019-06-12 10:15:17.601  WARN 4279 --- [http-nio-8090-exec-2] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/65f8483c]
+2019-06-12 10:15:17.605  WARN 4279 --- [http-nio-8090-exec-5] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/2a672c72]
+2019-06-12 10:15:17.608  WARN 4279 --- [http-nio-8090-exec-1] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/37666e5a]
+2019-06-12 10:15:17.612  WARN 4279 --- [http-nio-8090-exec-4] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/1322bbfc]
+2019-06-12 10:15:17.717  WARN 4279 --- [http-nio-8090-exec-3] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/8f80f8e2]
+2019-06-12 10:15:17.721  WARN 4279 --- [http-nio-8090-exec-7] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/77a8c18e]
+2019-06-12 10:15:17.723  WARN 4279 --- [http-nio-8090-exec-9] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/0bd01d81]
+2019-06-12 10:15:17.726  WARN 4279 --- [http-nio-8090-exec-10] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/f572f64b]
+2019-06-12 10:15:17.729  WARN 4279 --- [http-nio-8090-exec-6] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/474107db]
+2019-06-12 10:15:17.732  WARN 4279 --- [http-nio-8090-exec-2] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/b8e1d592]
+2019-06-12 10:15:17.736  WARN 4279 --- [http-nio-8090-exec-5] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/c8675dbd]
+2019-06-12 10:15:17.739  WARN 4279 --- [http-nio-8090-exec-1] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/e028b488]
+2019-06-12 10:15:17.743  WARN 4279 --- [http-nio-8090-exec-4] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/c35b6263]
+2019-06-12 10:15:17.745  WARN 4279 --- [http-nio-8090-exec-8] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/480ca384]
+2019-06-12 10:15:17.863  WARN 4279 --- [http-nio-8090-exec-7] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/bd089abe]
+2019-06-12 10:15:17.866  WARN 4279 --- [http-nio-8090-exec-9] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/c96a08cc]
+2019-06-12 10:15:17.869  WARN 4279 --- [http-nio-8090-exec-10] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/08a06c6b]
+2019-06-12 10:15:17.871  WARN 4279 --- [http-nio-8090-exec-6] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/f68f2b54]
+2019-06-12 10:15:17.874  WARN 4279 --- [http-nio-8090-exec-2] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/5856f612]
+2019-06-12 10:15:17.877  WARN 4279 --- [http-nio-8090-exec-5] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/cc8580d1]
+2019-06-12 10:15:17.880  WARN 4279 --- [http-nio-8090-exec-1] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/af0217a5]
+2019-06-12 10:15:17.883  WARN 4279 --- [http-nio-8090-exec-4] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/65f8483c]
+2019-06-12 10:15:17.885  WARN 4279 --- [http-nio-8090-exec-8] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/2a672c72]
+2019-06-12 10:15:17.888  WARN 4279 --- [http-nio-8090-exec-3] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/37666e5a]
+2019-06-12 10:15:18.007  WARN 4279 --- [http-nio-8090-exec-9] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/1322bbfc]
+2019-06-12 10:15:18.010  WARN 4279 --- [http-nio-8090-exec-10] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/8f80f8e2]
+2019-06-12 10:15:18.013  WARN 4279 --- [http-nio-8090-exec-6] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/77a8c18e]
+2019-06-12 10:15:18.015  WARN 4279 --- [http-nio-8090-exec-2] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/0bd01d81]
+2019-06-12 10:15:18.018  WARN 4279 --- [http-nio-8090-exec-5] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/f572f64b]
+2019-06-12 10:15:18.020  WARN 4279 --- [http-nio-8090-exec-1] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/474107db]
+2019-06-12 10:15:18.022  WARN 4279 --- [http-nio-8090-exec-4] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/b8e1d592]
+2019-06-12 10:15:18.025  WARN 4279 --- [http-nio-8090-exec-8] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/c8675dbd]
+2019-06-12 10:15:18.027  WARN 4279 --- [http-nio-8090-exec-3] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/e028b488]
+2019-06-12 10:15:18.030  WARN 4279 --- [http-nio-8090-exec-7] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/c35b6263]
+2019-06-12 10:15:18.152  WARN 4279 --- [http-nio-8090-exec-10] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/480ca384]
+2019-06-12 10:15:18.156  WARN 4279 --- [http-nio-8090-exec-6] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/bd089abe]
+2019-06-12 10:15:18.160  WARN 4279 --- [http-nio-8090-exec-6] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/c96a08cc]
+2019-06-12 10:15:18.162  WARN 4279 --- [http-nio-8090-exec-2] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/08a06c6b]
+2019-06-12 10:15:18.165  WARN 4279 --- [http-nio-8090-exec-5] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/f68f2b54]
+2019-06-12 10:15:18.168  WARN 4279 --- [http-nio-8090-exec-1] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/5856f612]
+2019-06-12 10:15:18.170  WARN 4279 --- [http-nio-8090-exec-4] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/cc8580d1]
+2019-06-12 10:15:18.173  WARN 4279 --- [http-nio-8090-exec-8] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/af0217a5]
+2019-06-12 10:15:18.176  WARN 4279 --- [http-nio-8090-exec-3] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/65f8483c]
+2019-06-12 10:15:18.178  WARN 4279 --- [http-nio-8090-exec-7] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/2a672c72]
+2019-06-12 10:15:18.291  WARN 4279 --- [http-nio-8090-exec-10] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/37666e5a]
+2019-06-12 10:15:18.296  WARN 4279 --- [http-nio-8090-exec-6] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/1322bbfc]
+2019-06-12 10:15:18.299  WARN 4279 --- [http-nio-8090-exec-2] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/8f80f8e2]
+2019-06-12 10:15:18.301  WARN 4279 --- [http-nio-8090-exec-5] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/77a8c18e]
+2019-06-12 10:15:18.304  WARN 4279 --- [http-nio-8090-exec-1] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/0bd01d81]
+2019-06-12 10:15:18.307  WARN 4279 --- [http-nio-8090-exec-4] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/f572f64b]
+2019-06-12 10:15:18.309  WARN 4279 --- [http-nio-8090-exec-8] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/474107db]
+2019-06-12 10:15:18.311  WARN 4279 --- [http-nio-8090-exec-3] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/b8e1d592]
+2019-06-12 10:15:18.313  WARN 4279 --- [http-nio-8090-exec-7] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/c8675dbd]
+2019-06-12 10:15:18.315  WARN 4279 --- [http-nio-8090-exec-9] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/127.0.0.1:8090/e028b488]
+2019-06-12 10:16:31.551  INFO 4279 --- [http-nio-8090-exec-6] org.perf4j.TimingLogger                  : start[1560305791539] time[11] tag[get short url from redis] message[77a8c18e]
+2019-06-12 10:16:31.551  INFO 4279 --- [http-nio-8090-exec-6] c.n.s.controller.ShortUrlController      : URL Retrieved: https://juejin.im/post/5c983581e51d4540293448e8
+2019-06-12 10:16:31.687  INFO 4279 --- [http-nio-8090-exec-2] org.perf4j.TimingLogger                  : start[1560305791683] time[4] tag[get short url from redis] message[0bd01d81]
+2019-06-12 10:16:31.687  INFO 4279 --- [http-nio-8090-exec-2] c.n.s.controller.ShortUrlController      : URL Retrieved: https://juejin.im/post/5c6509d9f265da2dd37c0397
+2019-06-12 10:16:31.825  INFO 4279 --- [http-nio-8090-exec-5] org.perf4j.TimingLogger                  : start[1560305791821] time[3] tag[get short url from redis] message[f572f64b]
+2019-06-12 10:16:31.825  INFO 4279 --- [http-nio-8090-exec-5] c.n.s.controller.ShortUrlController      : URL Retrieved: https://www.jianshu.com/p/ae43ed4cf4ae
+2019-06-12 10:16:31.970  INFO 4279 --- [http-nio-8090-exec-1] org.perf4j.TimingLogger                  : start[1560305791966] time[4] tag[get short url from redis] message[474107db]
+2019-06-12 10:16:31.970  INFO 4279 --- [http-nio-8090-exec-1] c.n.s.controller.ShortUrlController      : URL Retrieved: https://juejin.im/post/5c3fe473f265da615c5980de
+2019-06-12 10:16:32.116  INFO 4279 --- [http-nio-8090-exec-4] org.perf4j.TimingLogger                  : start[1560305792112] time[4] tag[get short url from redis] message[b8e1d592]
+2019-06-12 10:16:32.116  INFO 4279 --- [http-nio-8090-exec-4] c.n.s.controller.ShortUrlController      : URL Retrieved: https://coolshell.cn/articles/19395.html
+2019-06-12 10:16:32.259  INFO 4279 --- [http-nio-8090-exec-8] org.perf4j.TimingLogger                  : start[1560305792254] time[4] tag[get short url from redis] message[c8675dbd]
+2019-06-12 10:16:32.259  INFO 4279 --- [http-nio-8090-exec-8] c.n.s.controller.ShortUrlController      : URL Retrieved: https://zhuanlan.zhihu.com/p/25584012
+2019-06-12 10:16:32.403  INFO 4279 --- [http-nio-8090-exec-3] org.perf4j.TimingLogger                  : start[1560305792398] time[4] tag[get short url from redis] message[e028b488]
+2019-06-12 10:16:32.403  INFO 4279 --- [http-nio-8090-exec-3] c.n.s.controller.ShortUrlController      : URL Retrieved: https://stackoverflow.com/questions/30528548/register-new-undertow-sessionmanager/30586961?r=SearchResults#30586961
+2019-06-12 10:16:36.297  INFO 4279 --- [http-nio-8090-exec-9] org.perf4j.TimingLogger                  : start[1560305796293] time[4] tag[get short url from redis] message[c35b6263]
+2019-06-12 10:16:36.297  INFO 4279 --- [http-nio-8090-exec-9] c.n.s.controller.ShortUrlController      : URL Retrieved: https://juejin.im/entry/5c6391bfe51d457f9c0598b0?utm_source=gold_browser_extension
+2019-06-12 10:16:38.095  INFO 4279 --- [http-nio-8090-exec-6] org.perf4j.TimingLogger                  : start[1560305798090] time[4] tag[get short url from redis] message[480ca384]
+2019-06-12 10:16:38.095  INFO 4279 --- [http-nio-8090-exec-6] c.n.s.controller.ShortUrlController      : URL Retrieved: https://reinhard.codes/2015/09/16/lomboks-builder-annotation-and-inheritance/
+2019-06-12 10:16:39.143  INFO 4279 --- [http-nio-8090-exec-5] org.perf4j.TimingLogger                  : start[1560305799139] time[4] tag[get short url from redis] message[bd089abe]
+2019-06-12 10:16:39.143  INFO 4279 --- [http-nio-8090-exec-5] c.n.s.controller.ShortUrlController      : URL Retrieved: https://hub.docker.com/_/redis
+2019-06-12 10:16:41.243  INFO 4279 --- [http-nio-8090-exec-4] org.perf4j.TimingLogger                  : start[1560305801239] time[4] tag[get short url from redis] message[c96a08cc]
+2019-06-12 10:16:41.243  INFO 4279 --- [http-nio-8090-exec-4] c.n.s.controller.ShortUrlController      : URL Retrieved: https://blog.csdn.net/liyiming2017/article/details/82966031
+2019-06-12 10:16:42.682  INFO 4279 --- [http-nio-8090-exec-3] org.perf4j.TimingLogger                  : start[1560305802678] time[4] tag[get short url from redis] message[08a06c6b]
+2019-06-12 10:16:42.683  INFO 4279 --- [http-nio-8090-exec-3] c.n.s.controller.ShortUrlController      : URL Retrieved: https://www.runoob.com/linux/linux-shell-test.html
+2019-06-12 10:16:45.828  INFO 4279 --- [http-nio-8090-exec-9] org.perf4j.TimingLogger                  : start[1560305805825] time[3] tag[get short url from redis] message[f68f2b54]
+2019-06-12 10:16:45.829  INFO 4279 --- [http-nio-8090-exec-9] c.n.s.controller.ShortUrlController      : URL Retrieved: https://github.com/uglide/RedisDesktopManager/blob/2019/docs/install.md
+2019-06-12 10:16:45.834  INFO 4279 --- [http-nio-8090-exec-6] org.perf4j.TimingLogger                  : start[1560305805830] time[3] tag[get short url from redis] message[5856f612]
+2019-06-12 10:16:45.834  INFO 4279 --- [http-nio-8090-exec-6] c.n.s.controller.ShortUrlController      : URL Retrieved: https://blog.csdn.net/huangchunxia_1/article/details/79649481
+2019-06-12 10:16:46.915  INFO 4279 --- [http-nio-8090-exec-5] org.perf4j.TimingLogger                  : start[1560305806911] time[3] tag[get short url from redis] message[cc8580d1]
+2019-06-12 10:16:46.915  INFO 4279 --- [http-nio-8090-exec-5] c.n.s.controller.ShortUrlController      : URL Retrieved: https://hub.docker.com
+2019-06-12 10:16:48.833  INFO 4279 --- [http-nio-8090-exec-4] org.perf4j.TimingLogger                  : start[1560305808828] time[4] tag[get short url from redis] message[af0217a5]
+2019-06-12 10:16:48.833  INFO 4279 --- [http-nio-8090-exec-4] c.n.s.controller.ShortUrlController      : URL Retrieved: https://juejin.im/post/5cfe7778f265da1b6e65988b
+2019-06-12 10:16:50.329  INFO 4279 --- [http-nio-8090-exec-3] org.perf4j.TimingLogger                  : start[1560305810325] time[3] tag[get short url from redis] message[65f8483c]
+2019-06-12 10:16:50.330  INFO 4279 --- [http-nio-8090-exec-3] c.n.s.controller.ShortUrlController      : URL Retrieved: https://jmeter.apache.org/index.html
+2019-06-12 10:16:50.679  INFO 4279 --- [http-nio-8090-exec-7] org.perf4j.TimingLogger                  : start[1560305810675] time[3] tag[get short url from redis] message[2a672c72]
+2019-06-12 10:16:50.679  INFO 4279 --- [http-nio-8090-exec-7] c.n.s.controller.ShortUrlController      : URL Retrieved: https://reinhard.codes/2016/07/13/using-lomboks-builder-annotation-with-default-values/
+2019-06-12 10:16:50.887  INFO 4279 --- [http-nio-8090-exec-9] org.perf4j.TimingLogger                  : start[1560305810883] time[3] tag[get short url from redis] message[37666e5a]
+2019-06-12 10:16:50.887  INFO 4279 --- [http-nio-8090-exec-9] c.n.s.controller.ShortUrlController      : URL Retrieved: https://docs.spring.io/spring-boot/docs/current/gradle-plugin/reference/html/
+2019-06-12 10:16:51.187  INFO 4279 --- [http-nio-8090-exec-2] org.perf4j.TimingLogger                  : start[1560305811181] time[6] tag[get short url from redis] message[1322bbfc]
+2019-06-12 10:16:51.188  INFO 4279 --- [http-nio-8090-exec-2] c.n.s.controller.ShortUrlController      : URL Retrieved: https://mp.weixin.qq.com/s?__biz=MzA4NTg1MjM0Mg==&mid=2657261357&idx=1&sn=ebb11a1623e00ca8e6ad55c9ad6b2547#rd
+2019-06-12 10:16:51.724  INFO 4279 --- [http-nio-8090-exec-1] org.perf4j.TimingLogger                  : start[1560305811721] time[3] tag[get short url from redis] message[8f80f8e2]
+2019-06-12 10:16:51.725  INFO 4279 --- [http-nio-8090-exec-1] c.n.s.controller.ShortUrlController      : URL Retrieved: http://zhangtielei.com/posts/blog-redlock-reasoning.html
+2019-06-12 10:16:53.406  INFO 4279 --- [http-nio-8090-exec-8] org.perf4j.TimingLogger                  : start[1560305813403] time[2] tag[get short url from redis] message[77a8c18e]
+2019-06-12 10:16:53.406  INFO 4279 --- [http-nio-8090-exec-8] c.n.s.controller.ShortUrlController      : URL Retrieved: https://juejin.im/post/5c983581e51d4540293448e8
+2019-06-12 10:16:57.517  INFO 4279 --- [http-nio-8090-exec-7] org.perf4j.TimingLogger                  : start[1560305817514] time[3] tag[get short url from redis] message[0bd01d81]
+2019-06-12 10:16:57.517  INFO 4279 --- [http-nio-8090-exec-7] c.n.s.controller.ShortUrlController      : URL Retrieved: https://juejin.im/post/5c6509d9f265da2dd37c0397
+2019-06-12 10:16:58.021  INFO 4279 --- [http-nio-8090-exec-9] org.perf4j.TimingLogger                  : start[1560305818018] time[2] tag[get short url from redis] message[f572f64b]
+2019-06-12 10:16:58.021  INFO 4279 --- [http-nio-8090-exec-9] c.n.s.controller.ShortUrlController      : URL Retrieved: https://www.jianshu.com/p/ae43ed4cf4ae
+2019-06-12 10:16:58.215  INFO 4279 --- [http-nio-8090-exec-2] org.perf4j.TimingLogger                  : start[1560305818211] time[3] tag[get short url from redis] message[474107db]
+2019-06-12 10:16:58.215  INFO 4279 --- [http-nio-8090-exec-2] c.n.s.controller.ShortUrlController      : URL Retrieved: https://juejin.im/post/5c3fe473f265da615c5980de
+2019-06-12 10:16:58.783  INFO 4279 --- [http-nio-8090-exec-1] org.perf4j.TimingLogger                  : start[1560305818780] time[2] tag[get short url from redis] message[b8e1d592]
+2019-06-12 10:16:58.784  INFO 4279 --- [http-nio-8090-exec-1] c.n.s.controller.ShortUrlController      : URL Retrieved: https://coolshell.cn/articles/19395.html
+2019-06-12 10:16:59.229  INFO 4279 --- [http-nio-8090-exec-8] org.perf4j.TimingLogger                  : start[1560305819226] time[3] tag[get short url from redis] message[c8675dbd]
+2019-06-12 10:16:59.230  INFO 4279 --- [http-nio-8090-exec-8] c.n.s.controller.ShortUrlController      : URL Retrieved: https://zhuanlan.zhihu.com/p/25584012
+2019-06-12 10:16:59.459  INFO 4279 --- [http-nio-8090-exec-3] org.perf4j.TimingLogger                  : start[1560305819457] time[2] tag[get short url from redis] message[e028b488]
+2019-06-12 10:16:59.460  INFO 4279 --- [http-nio-8090-exec-3] c.n.s.controller.ShortUrlController      : URL Retrieved: https://stackoverflow.com/questions/30528548/register-new-undertow-sessionmanager/30586961?r=SearchResults#30586961
+2019-06-12 10:16:59.828  INFO 4279 --- [http-nio-8090-exec-10] org.perf4j.TimingLogger                  : start[1560305819823] time[3] tag[get short url from redis] message[c35b6263]
+2019-06-12 10:16:59.831  INFO 4279 --- [http-nio-8090-exec-10] c.n.s.controller.ShortUrlController      : URL Retrieved: https://juejin.im/entry/5c6391bfe51d457f9c0598b0?utm_source=gold_browser_extension
+2019-06-12 10:17:00.525  INFO 4279 --- [http-nio-8090-exec-6] org.perf4j.TimingLogger                  : start[1560305820522] time[2] tag[get short url from redis] message[480ca384]
+2019-06-12 10:17:00.525  INFO 4279 --- [http-nio-8090-exec-6] c.n.s.controller.ShortUrlController      : URL Retrieved: https://reinhard.codes/2015/09/16/lomboks-builder-annotation-and-inheritance/
+2019-06-12 10:17:00.614  INFO 4279 --- [http-nio-8090-exec-5] org.perf4j.TimingLogger                  : start[1560305820612] time[2] tag[get short url from redis] message[bd089abe]
+2019-06-12 10:17:00.614  INFO 4279 --- [http-nio-8090-exec-5] c.n.s.controller.ShortUrlController      : URL Retrieved: https://hub.docker.com/_/redis
+2019-06-12 10:17:01.684  INFO 4279 --- [http-nio-8090-exec-4] org.perf4j.TimingLogger                  : start[1560305821681] time[2] tag[get short url from redis] message[c96a08cc]
+2019-06-12 10:17:01.684  INFO 4279 --- [http-nio-8090-exec-4] c.n.s.controller.ShortUrlController      : URL Retrieved: https://blog.csdn.net/liyiming2017/article/details/82966031
+2019-06-12 10:17:03.260  INFO 4279 --- [http-nio-8090-exec-3] org.perf4j.TimingLogger                  : start[1560305823256] time[3] tag[get short url from redis] message[08a06c6b]
+2019-06-12 10:17:03.260  INFO 4279 --- [http-nio-8090-exec-3] c.n.s.controller.ShortUrlController      : URL Retrieved: https://www.runoob.com/linux/linux-shell-test.html
+2019-06-12 10:17:03.534  INFO 4279 --- [http-nio-8090-exec-10] org.perf4j.TimingLogger                  : start[1560305823531] time[2] tag[get short url from redis] message[f68f2b54]
+2019-06-12 10:17:03.534  INFO 4279 --- [http-nio-8090-exec-10] c.n.s.controller.ShortUrlController      : URL Retrieved: https://github.com/uglide/RedisDesktopManager/blob/2019/docs/install.md
+2019-06-12 10:17:05.088  INFO 4279 --- [http-nio-8090-exec-6] org.perf4j.TimingLogger                  : start[1560305825085] time[2] tag[get short url from redis] message[5856f612]
+2019-06-12 10:17:05.088  INFO 4279 --- [http-nio-8090-exec-6] c.n.s.controller.ShortUrlController      : URL Retrieved: https://blog.csdn.net/huangchunxia_1/article/details/79649481
+2019-06-12 10:17:10.308  INFO 4279 --- [http-nio-8090-exec-5] org.perf4j.TimingLogger                  : start[1560305830305] time[3] tag[get short url from redis] message[cc8580d1]
+2019-06-12 10:17:10.308  INFO 4279 --- [http-nio-8090-exec-5] c.n.s.controller.ShortUrlController      : URL Retrieved: https://hub.docker.com
+2019-06-12 10:17:13.745  INFO 4279 --- [http-nio-8090-exec-4] org.perf4j.TimingLogger                  : start[1560305833742] time[3] tag[get short url from redis] message[af0217a5]
+2019-06-12 10:17:13.746  INFO 4279 --- [http-nio-8090-exec-4] c.n.s.controller.ShortUrlController      : URL Retrieved: https://juejin.im/post/5cfe7778f265da1b6e65988b
+2019-06-12 10:17:15.493  INFO 4279 --- [http-nio-8090-exec-3] org.perf4j.TimingLogger                  : start[1560305835490] time[3] tag[get short url from redis] message[65f8483c]
+2019-06-12 10:17:15.493  INFO 4279 --- [http-nio-8090-exec-3] c.n.s.controller.ShortUrlController      : URL Retrieved: https://jmeter.apache.org/index.html
+2019-06-12 10:17:15.544  INFO 4279 --- [http-nio-8090-exec-10] org.perf4j.TimingLogger                  : start[1560305835540] time[3] tag[get short url from redis] message[2a672c72]
+2019-06-12 10:17:15.544  INFO 4279 --- [http-nio-8090-exec-10] c.n.s.controller.ShortUrlController      : URL Retrieved: https://reinhard.codes/2016/07/13/using-lomboks-builder-annotation-with-default-values/
+2019-06-12 10:17:15.961  INFO 4279 --- [http-nio-8090-exec-6] org.perf4j.TimingLogger                  : start[1560305835958] time[2] tag[get short url from redis] message[37666e5a]
+2019-06-12 10:17:15.961  INFO 4279 --- [http-nio-8090-exec-6] c.n.s.controller.ShortUrlController      : URL Retrieved: https://docs.spring.io/spring-boot/docs/current/gradle-plugin/reference/html/
+2019-06-12 10:17:17.041  INFO 4279 --- [http-nio-8090-exec-2] org.perf4j.TimingLogger                  : start[1560305837038] time[2] tag[get short url from redis] message[1322bbfc]
+2019-06-12 10:17:17.041  INFO 4279 --- [http-nio-8090-exec-2] c.n.s.controller.ShortUrlController      : URL Retrieved: https://mp.weixin.qq.com/s?__biz=MzA4NTg1MjM0Mg==&mid=2657261357&idx=1&sn=ebb11a1623e00ca8e6ad55c9ad6b2547#rd
+2019-06-12 10:17:19.426  INFO 4279 --- [http-nio-8090-exec-1] org.perf4j.TimingLogger                  : start[1560305839423] time[3] tag[get short url from redis] message[8f80f8e2]
+2019-06-12 10:17:19.426  INFO 4279 --- [http-nio-8090-exec-1] c.n.s.controller.ShortUrlController      : URL Retrieved: http://zhangtielei.com/posts/blog-redlock-reasoning.html
+2019-06-12 10:17:19.548  INFO 4279 --- [http-nio-8090-exec-8] org.perf4j.TimingLogger                  : start[1560305839544] time[3] tag[get short url from redis] message[77a8c18e]
+2019-06-12 10:17:19.548  INFO 4279 --- [http-nio-8090-exec-8] c.n.s.controller.ShortUrlController      : URL Retrieved: https://juejin.im/post/5c983581e51d4540293448e8
+2019-06-12 10:17:20.430  INFO 4279 --- [http-nio-8090-exec-7] org.perf4j.TimingLogger                  : start[1560305840426] time[3] tag[get short url from redis] message[0bd01d81]
+2019-06-12 10:17:20.430  INFO 4279 --- [http-nio-8090-exec-7] c.n.s.controller.ShortUrlController      : URL Retrieved: https://juejin.im/post/5c6509d9f265da2dd37c0397
+2019-06-12 10:17:21.142  INFO 4279 --- [http-nio-8090-exec-10] org.perf4j.TimingLogger                  : start[1560305841138] time[3] tag[get short url from redis] message[f572f64b]
+2019-06-12 10:17:21.142  INFO 4279 --- [http-nio-8090-exec-10] c.n.s.controller.ShortUrlController      : URL Retrieved: https://www.jianshu.com/p/ae43ed4cf4ae
+2019-06-12 10:17:21.776  INFO 4279 --- [http-nio-8090-exec-6] org.perf4j.TimingLogger                  : start[1560305841773] time[3] tag[get short url from redis] message[474107db]
+2019-06-12 10:17:21.776  INFO 4279 --- [http-nio-8090-exec-6] c.n.s.controller.ShortUrlController      : URL Retrieved: https://juejin.im/post/5c3fe473f265da615c5980de
+2019-06-12 10:17:23.680  INFO 4279 --- [http-nio-8090-exec-5] org.perf4j.TimingLogger                  : start[1560305843677] time[3] tag[get short url from redis] message[b8e1d592]
+2019-06-12 10:17:23.680  INFO 4279 --- [http-nio-8090-exec-5] c.n.s.controller.ShortUrlController      : URL Retrieved: https://coolshell.cn/articles/19395.html
+2019-06-12 10:17:24.231  INFO 4279 --- [http-nio-8090-exec-3] org.perf4j.TimingLogger                  : start[1560305844228] time[2] tag[get short url from redis] message[e028b488]
+2019-06-12 10:17:24.231  INFO 4279 --- [http-nio-8090-exec-8] org.perf4j.TimingLogger                  : start[1560305844228] time[2] tag[get short url from redis] message[c8675dbd]
+2019-06-12 10:17:24.231  INFO 4279 --- [http-nio-8090-exec-3] c.n.s.controller.ShortUrlController      : URL Retrieved: https://stackoverflow.com/questions/30528548/register-new-undertow-sessionmanager/30586961?r=SearchResults#30586961
+2019-06-12 10:17:24.231  INFO 4279 --- [http-nio-8090-exec-8] c.n.s.controller.ShortUrlController      : URL Retrieved: https://zhuanlan.zhihu.com/p/25584012
+2019-06-12 10:17:26.565  INFO 4279 --- [http-nio-8090-exec-10] org.perf4j.TimingLogger                  : start[1560305846561] time[3] tag[get short url from redis] message[c35b6263]
+2019-06-12 10:17:26.565  INFO 4279 --- [http-nio-8090-exec-10] c.n.s.controller.ShortUrlController      : URL Retrieved: https://juejin.im/entry/5c6391bfe51d457f9c0598b0?utm_source=gold_browser_extension
+2019-06-12 10:17:27.935  INFO 4279 --- [http-nio-8090-exec-6] org.perf4j.TimingLogger                  : start[1560305847931] time[3] tag[get short url from redis] message[480ca384]
+2019-06-12 10:17:27.935  INFO 4279 --- [http-nio-8090-exec-6] c.n.s.controller.ShortUrlController      : URL Retrieved: https://reinhard.codes/2015/09/16/lomboks-builder-annotation-and-inheritance/
+2019-06-12 10:17:29.120  INFO 4279 --- [http-nio-8090-exec-5] org.perf4j.TimingLogger                  : start[1560305849116] time[3] tag[get short url from redis] message[bd089abe]
+2019-06-12 10:17:29.120  INFO 4279 --- [http-nio-8090-exec-5] c.n.s.controller.ShortUrlController      : URL Retrieved: https://hub.docker.com/_/redis
+2019-06-12 10:17:29.524  INFO 4279 --- [http-nio-8090-exec-1] org.perf4j.TimingLogger                  : start[1560305849521] time[3] tag[get short url from redis] message[c96a08cc]
+2019-06-12 10:17:29.548  INFO 4279 --- [http-nio-8090-exec-1] c.n.s.controller.ShortUrlController      : URL Retrieved: https://blog.csdn.net/liyiming2017/article/details/82966031
+2019-06-12 10:17:29.868  INFO 4279 --- [http-nio-8090-exec-3] org.perf4j.TimingLogger                  : start[1560305849865] time[3] tag[get short url from redis] message[08a06c6b]
+2019-06-12 10:17:29.868  INFO 4279 --- [http-nio-8090-exec-3] c.n.s.controller.ShortUrlController      : URL Retrieved: https://www.runoob.com/linux/linux-shell-test.html
+2019-06-12 10:17:34.225  INFO 4279 --- [http-nio-8090-exec-9] org.perf4j.TimingLogger                  : start[1560305854221] time[3] tag[get short url from redis] message[f68f2b54]
+2019-06-12 10:17:34.225  INFO 4279 --- [http-nio-8090-exec-9] c.n.s.controller.ShortUrlController      : URL Retrieved: https://github.com/uglide/RedisDesktopManager/blob/2019/docs/install.md
+2019-06-12 10:17:34.362  INFO 4279 --- [http-nio-8090-exec-2] org.perf4j.TimingLogger                  : start[1560305854360] time[2] tag[get short url from redis] message[5856f612]
+2019-06-12 10:17:34.363  INFO 4279 --- [http-nio-8090-exec-2] c.n.s.controller.ShortUrlController      : URL Retrieved: https://blog.csdn.net/huangchunxia_1/article/details/79649481
+2019-06-12 10:17:35.111  INFO 4279 --- [http-nio-8090-exec-4] org.perf4j.TimingLogger                  : start[1560305855108] time[3] tag[get short url from redis] message[cc8580d1]
+2019-06-12 10:17:35.111  INFO 4279 --- [http-nio-8090-exec-4] c.n.s.controller.ShortUrlController      : URL Retrieved: https://hub.docker.com
+2019-06-12 10:17:38.495  INFO 4279 --- [http-nio-8090-exec-8] org.perf4j.TimingLogger                  : start[1560305858482] time[13] tag[get short url from redis] message[af0217a5]
+2019-06-12 10:17:38.496  INFO 4279 --- [http-nio-8090-exec-8] c.n.s.controller.ShortUrlController      : URL Retrieved: https://juejin.im/post/5cfe7778f265da1b6e65988b
+2019-06-12 10:17:40.382  INFO 4279 --- [http-nio-8090-exec-7] org.perf4j.TimingLogger                  : start[1560305860379] time[3] tag[get short url from redis] message[65f8483c]
+2019-06-12 10:17:40.383  INFO 4279 --- [http-nio-8090-exec-7] c.n.s.controller.ShortUrlController      : URL Retrieved: https://jmeter.apache.org/index.html
+2019-06-12 10:17:41.766  INFO 4279 --- [http-nio-8090-exec-9] org.perf4j.TimingLogger                  : start[1560305861763] time[2] tag[get short url from redis] message[2a672c72]
+2019-06-12 10:17:41.766  INFO 4279 --- [http-nio-8090-exec-9] c.n.s.controller.ShortUrlController      : URL Retrieved: https://reinhard.codes/2016/07/13/using-lomboks-builder-annotation-with-default-values/
+2019-06-12 10:17:46.492  INFO 4279 --- [http-nio-8090-exec-4] org.perf4j.TimingLogger                  : start[1560305866488] time[3] tag[get short url from redis] message[37666e5a]
+2019-06-12 10:17:46.492  INFO 4279 --- [http-nio-8090-exec-4] c.n.s.controller.ShortUrlController      : URL Retrieved: https://docs.spring.io/spring-boot/docs/current/gradle-plugin/reference/html/
+2019-06-12 10:17:51.495  INFO 4279 --- [http-nio-8090-exec-8] org.perf4j.TimingLogger                  : start[1560305871492] time[3] tag[get short url from redis] message[1322bbfc]
+2019-06-12 10:17:51.496  INFO 4279 --- [http-nio-8090-exec-8] c.n.s.controller.ShortUrlController      : URL Retrieved: https://mp.weixin.qq.com/s?__biz=MzA4NTg1MjM0Mg==&mid=2657261357&idx=1&sn=ebb11a1623e00ca8e6ad55c9ad6b2547#rd
+2019-06-12 10:17:56.083  INFO 4279 --- [http-nio-8090-exec-7] org.perf4j.TimingLogger                  : start[1560305876080] time[2] tag[get short url from redis] message[8f80f8e2]
+2019-06-12 10:17:56.083  INFO 4279 --- [http-nio-8090-exec-7] c.n.s.controller.ShortUrlController      : URL Retrieved: http://zhangtielei.com/posts/blog-redlock-reasoning.html
+2019-06-12 10:17:56.267  INFO 4279 --- [http-nio-8090-exec-9] org.perf4j.TimingLogger                  : start[1560305876264] time[3] tag[get short url from redis] message[77a8c18e]
+2019-06-12 10:17:56.267  INFO 4279 --- [http-nio-8090-exec-9] c.n.s.controller.ShortUrlController      : URL Retrieved: https://juejin.im/post/5c983581e51d4540293448e8
+2019-06-12 10:18:02.004  INFO 4279 --- [http-nio-8090-exec-2] org.perf4j.TimingLogger                  : start[1560305882000] time[3] tag[get short url from redis] message[0bd01d81]
+2019-06-12 10:18:02.004  INFO 4279 --- [http-nio-8090-exec-2] c.n.s.controller.ShortUrlController      : URL Retrieved: https://juejin.im/post/5c6509d9f265da2dd37c0397
+2019-06-12 10:18:02.686  INFO 4279 --- [http-nio-8090-exec-4] org.perf4j.TimingLogger                  : start[1560305882682] time[3] tag[get short url from redis] message[f572f64b]
+2019-06-12 10:18:02.686  INFO 4279 --- [http-nio-8090-exec-4] c.n.s.controller.ShortUrlController      : URL Retrieved: https://www.jianshu.com/p/ae43ed4cf4ae
+2019-06-12 10:18:06.465  INFO 4279 --- [http-nio-8090-exec-3] org.perf4j.TimingLogger                  : start[1560305886461] time[3] tag[get short url from redis] message[474107db]
+2019-06-12 10:18:06.465  INFO 4279 --- [http-nio-8090-exec-3] c.n.s.controller.ShortUrlController      : URL Retrieved: https://juejin.im/post/5c3fe473f265da615c5980de
+2019-06-12 10:18:12.724  INFO 4279 --- [http-nio-8090-exec-9] org.perf4j.TimingLogger                  : start[1560305892720] time[3] tag[get short url from redis] message[b8e1d592]
+2019-06-12 10:18:12.724  INFO 4279 --- [http-nio-8090-exec-9] c.n.s.controller.ShortUrlController      : URL Retrieved: https://coolshell.cn/articles/19395.html
+2019-06-12 10:18:23.453  INFO 4279 --- [http-nio-8090-exec-5] org.perf4j.TimingLogger                  : start[1560305903451] time[2] tag[get short url from redis] message[c8675dbd]
+2019-06-12 10:18:23.454  INFO 4279 --- [http-nio-8090-exec-5] c.n.s.controller.ShortUrlController      : URL Retrieved: https://zhuanlan.zhihu.com/p/25584012
+2019-06-12 10:18:29.243  INFO 4279 --- [http-nio-8090-exec-1] org.perf4j.TimingLogger                  : start[1560305909240] time[2] tag[get short url from redis] message[e028b488]
+2019-06-12 10:18:29.243  INFO 4279 --- [http-nio-8090-exec-1] c.n.s.controller.ShortUrlController      : URL Retrieved: https://stackoverflow.com/questions/30528548/register-new-undertow-sessionmanager/30586961?r=SearchResults#30586961
