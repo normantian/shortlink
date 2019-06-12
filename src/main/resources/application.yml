@@ -37,10 +37,12 @@ spring:
       charset: UTF-8
       enabled: true
 
+
 service:
   domain: http://localhost:${server.port}/
   expectedInsertions: 100000
   defaultUrl: http://www.baidu.com
+  timeoutMinutes: 30
 
 management:
   endpoints:

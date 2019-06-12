@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.perf4j.StopWatch;
 import org.perf4j.slf4j.Slf4JStopWatch;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -34,12 +35,17 @@ public class ShortUrlServiceImpl implements ShortUrlService {
 
     private static final String SHORT_URL_PATTERN = "url:{0}";
 
-    private static final long TIME_OUT_MINUTES = 30L;
+//    private static final long TIME_OUT_MINUTES = 30L;
+
+    private final long timeoutMinutes;
 
     @Autowired
-    public ShortUrlServiceImpl(ShortUrlDao shortUrlDao, StringRedisTemplate stringRedisTemplate) {
+    public ShortUrlServiceImpl(ShortUrlDao shortUrlDao,
+                               @Value("${service.timeoutMinutes:30}") long timeoutMinutes,
+                               StringRedisTemplate stringRedisTemplate) {
         this.shortUrlDao = shortUrlDao;
         this.stringRedisTemplate = stringRedisTemplate;
+        this.timeoutMinutes = timeoutMinutes;
     }
 
 
@@ -51,7 +57,7 @@ public class ShortUrlServiceImpl implements ShortUrlService {
 
         if (saved) {
             stringRedisTemplate.opsForValue().setIfAbsent(MessageFormat.format(SHORT_URL_PATTERN, shortUrl.getTag()),
-                    shortUrl.getSourceUrl(), TIME_OUT_MINUTES, TimeUnit.MINUTES);
+                    shortUrl.getSourceUrl(), timeoutMinutes, TimeUnit.MINUTES);
         }
         sw.stop("save short url", shortUrl.getTag());
 
@@ -67,15 +73,15 @@ public class ShortUrlServiceImpl implements ShortUrlService {
 
 
         if (!StringUtils.isEmpty(url)) {
-            stringRedisTemplate.expire(tagKey, TIME_OUT_MINUTES, TimeUnit.MINUTES);
+            stringRedisTemplate.expire(tagKey, timeoutMinutes, TimeUnit.MINUTES);
             sw.stop("get short url from redis", tag);
             return Optional.of(ShortUrl.builder().tag(tag).sourceUrl(url).build());
         }
 
         final Optional<ShortUrl> raw = shortUrlDao.getByTag(tag);
-        raw.ifPresent( shortUrl -> {
+        raw.ifPresent(shortUrl -> {
             stringRedisTemplate.opsForValue().setIfAbsent(MessageFormat.format(SHORT_URL_PATTERN, shortUrl.getTag()),
-                    shortUrl.getSourceUrl(), TIME_OUT_MINUTES, TimeUnit.MINUTES);
+                    shortUrl.getSourceUrl(), timeoutMinutes, TimeUnit.MINUTES);
             log.info("save short url {} to redis.", shortUrl);
         });
 
