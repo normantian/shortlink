@@ -42,13 +42,17 @@ public class ShortUrlController {
 
     private final BloomTagFilter bloomTagFilter;
 
+    private final String defaultUrl;
+
     @Autowired
     public ShortUrlController(StringRedisTemplate stringRedisTemplate,
                               @Value("${service.domain}") String domain,
+                              @Value("${service.defaultUrl}") String defaultUrl,
                               ShortUrlService shortUrlService,
                               BloomTagFilter bloomTagFilter) {
         this.stringRedisTemplate = stringRedisTemplate;
         this.domain = domain;
+        this.defaultUrl = defaultUrl;
         this.shortUrlService = shortUrlService;
         this.bloomTagFilter = bloomTagFilter;
     }
@@ -106,7 +110,6 @@ public class ShortUrlController {
             final Optional<ShortUrl> shortUrl = shortUrlService.getByTag(tag);
 
             if (!shortUrl.isPresent()) {
-//                return ResponseEntity.ok(Response.fail("There is no shorter URL for : " + tag));
                 return ResponseEntity.notFound().build();
             }
 
@@ -118,8 +121,13 @@ public class ShortUrlController {
             return new ResponseEntity<>(Response.ok(), headers, HttpStatus.MOVED_PERMANENTLY);
 
         }
-//        return ResponseEntity.ok(Response.fail("There is no shorter URL for : " + tag));
-        return ResponseEntity.notFound().build();
+//        return ResponseEntity.notFound().build();
+
+        final HttpHeaders headers = new HttpHeaders();
+        headers.add("Location", defaultUrl);
+        return new ResponseEntity<>(Response.ok(), headers, HttpStatus.FOUND);
+
+//        throw new RuntimeException("not found");
 
 
     }

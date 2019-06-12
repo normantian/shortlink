@@ -7,6 +7,7 @@ import com.norman.shortlink.service.ShortUrlService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.nio.charset.Charset;
@@ -28,10 +29,12 @@ public class BloomTagFilter implements InitializingBean {
 
     private ShortUrlService shortUrlService;
 
+
     @Autowired
-    public BloomTagFilter(ShortUrlService shortUrlService) {
+    public BloomTagFilter(ShortUrlService shortUrlService,
+                          @Value("${service.expectedInsertions:10000}") long expectedInsertions) {
         this.shortUrlService = shortUrlService;
-        this.bloomFilter = BloomFilter.create(Funnels.stringFunnel(Charset.forName("utf-8")), 10000, 0.000001);
+        this.bloomFilter = BloomFilter.create(Funnels.stringFunnel(Charset.forName("utf-8")), expectedInsertions, 0.000001);
 
     }
 
@@ -45,8 +48,6 @@ public class BloomTagFilter implements InitializingBean {
             final List<String> tags = allTags.get();
             tags.stream().forEach(tag -> bloomFilter.put(tag));
         }
-
-
 
         log.info("init bloom finish. size {}", bloomFilter.approximateElementCount());
     }

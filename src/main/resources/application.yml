@@ -39,6 +39,8 @@ spring:
 
 service:
   domain: http://localhost:${server.port}/
+  expectedInsertions: 100000
+  defaultUrl: http://www.baidu.com
 
 management:
   endpoints:
