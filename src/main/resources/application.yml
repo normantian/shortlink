@@ -41,6 +41,7 @@ spring:
 service:
   domain: http://localhost:${server.port}/
   expectedInsertions: 100000
+  localCacheSize: 100
   defaultUrl: http://www.baidu.com
   timeoutMinutes: 30
 

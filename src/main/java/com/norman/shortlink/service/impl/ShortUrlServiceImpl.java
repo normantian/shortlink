@@ -1,9 +1,11 @@
 package com.norman.shortlink.service.impl;
 
+import com.google.common.cache.Cache;
 import com.norman.shortlink.dao.ShortUrlDao;
 import com.norman.shortlink.model.ShortUrl;
 import com.norman.shortlink.service.ShortUrlService;
 import lombok.extern.slf4j.Slf4j;
+import org.checkerframework.checker.nullness.qual.Nullable;
 import org.perf4j.StopWatch;
 import org.perf4j.slf4j.Slf4JStopWatch;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,17 +39,19 @@ public class ShortUrlServiceImpl implements ShortUrlService {
 
     private static final String SHORT_URL_PATTERN = "url:{0}";
 
-//    private static final long TIME_OUT_MINUTES = 30L;
-
     private final long timeoutMinutes;
+
+    private final Cache<String,String> localCache;
 
     @Autowired
     public ShortUrlServiceImpl(ShortUrlDao shortUrlDao,
                                @Value("${service.timeoutMinutes:30}") long timeoutMinutes,
-                               StringRedisTemplate stringRedisTemplate) {
+                               StringRedisTemplate stringRedisTemplate,
+                               Cache<String,String> localCache) {
         this.shortUrlDao = shortUrlDao;
         this.stringRedisTemplate = stringRedisTemplate;
         this.timeoutMinutes = timeoutMinutes;
+        this.localCache = localCache;
     }
 
 
@@ -60,6 +64,8 @@ public class ShortUrlServiceImpl implements ShortUrlService {
         if (saved) {
             stringRedisTemplate.opsForValue().setIfAbsent(MessageFormat.format(SHORT_URL_PATTERN, shortUrl.getTag()),
                     shortUrl.getSourceUrl(), timeoutMinutes + ThreadLocalRandom.current().nextLong(0,5), TimeUnit.MINUTES);
+
+            localCache.put(shortUrl.getTag(), shortUrl.getSourceUrl());
         }
         sw.stop("save short url", shortUrl.getTag());
 
@@ -70,12 +76,18 @@ public class ShortUrlServiceImpl implements ShortUrlService {
     public Optional<ShortUrl> getByTag(String tag) {
         StopWatch sw = new Slf4JStopWatch();
 
-        final String tagKey = MessageFormat.format(SHORT_URL_PATTERN, tag);
-        final String url = stringRedisTemplate.opsForValue().get(tagKey);
+        String url = localCache.getIfPresent(tag);
+        if (!StringUtils.isEmpty(url)) {
+            sw.stop("get short url from local cache", tag);
+            return Optional.of(ShortUrl.builder().tag(tag).sourceUrl(url).build());
+        }
 
+        final String tagKey = MessageFormat.format(SHORT_URL_PATTERN, tag);
+        url = stringRedisTemplate.opsForValue().get(tagKey);
 
         if (!StringUtils.isEmpty(url)) {
             stringRedisTemplate.expire(tagKey, timeoutMinutes + ThreadLocalRandom.current().nextLong(0,5), TimeUnit.MINUTES);
+            localCache.put(tag, url);
             sw.stop("get short url from redis", tag);
             return Optional.of(ShortUrl.builder().tag(tag).sourceUrl(url).build());
         }
@@ -92,7 +104,7 @@ public class ShortUrlServiceImpl implements ShortUrlService {
     }
 
     @Override
-    public Optional<List<String>> getAllTags() {
+    public Optional<List<ShortUrl>> getAllTags() {
         return shortUrlDao.getAllTags();
     }
 }

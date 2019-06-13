@@ -1,21 +1,25 @@
 package com.norman.shortlink.controller;
 
+import com.google.common.cache.Cache;
+import com.google.common.cache.CacheStats;
+import com.google.common.hash.BloomFilter;
 import com.google.common.hash.Hashing;
-import com.norman.shortlink.config.BloomTagFilter;
 import com.norman.shortlink.model.ShortUrl;
 import com.norman.shortlink.service.ShortUrlService;
 import com.norman.shortlink.util.UrlUtils;
 import com.norman.shortlink.viewmodel.Response;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.beanutils.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.lang.reflect.InvocationTargetException;
 import java.nio.charset.StandardCharsets;
+import java.util.HashMap;
 import java.util.Optional;
 
 /**
@@ -30,31 +34,27 @@ import java.util.Optional;
 public class ShortUrlController {
 
 
-    private final StringRedisTemplate stringRedisTemplate;
-
-
     private final String domain;
-
-
-    private static final String SHORT_URL_PATTERN = "url:{0}";
 
     private final ShortUrlService shortUrlService;
 
-    private final BloomTagFilter bloomTagFilter;
+    private final BloomFilter<String> bloomFilter;
 
     private final String defaultUrl;
 
+    private final Cache<String, String> localCache;
+
     @Autowired
-    public ShortUrlController(StringRedisTemplate stringRedisTemplate,
-                              @Value("${service.domain}") String domain,
+    public ShortUrlController(@Value("${service.domain}") String domain,
                               @Value("${service.defaultUrl}") String defaultUrl,
                               ShortUrlService shortUrlService,
-                              BloomTagFilter bloomTagFilter) {
-        this.stringRedisTemplate = stringRedisTemplate;
+                              BloomFilter<String> bloomFilter,
+                              Cache<String, String> localCache) {
         this.domain = domain;
         this.defaultUrl = defaultUrl;
         this.shortUrlService = shortUrlService;
-        this.bloomTagFilter = bloomTagFilter;
+        this.bloomFilter = bloomFilter;
+        this.localCache = localCache;
     }
 
     /**
@@ -85,7 +85,7 @@ public class ShortUrlController {
             String tag = Hashing.murmur3_32().hashString(url, StandardCharsets.UTF_8).toString();
             log.info("URL Id generated: {}", tag);
 
-            if (bloomTagFilter.mightContain(tag)) {
+            if (bloomFilter.mightContain(tag)) {
 
                 return ResponseEntity.ok(String.join("", domain, tag));
             }
@@ -93,7 +93,7 @@ public class ShortUrlController {
             ShortUrl shortUrl = ShortUrl.builder().sourceUrl(url).tag(tag).build();
             final boolean saved = this.shortUrlService.saveShortUrl(shortUrl);
             if (saved) {
-                bloomTagFilter.put(tag);
+                bloomFilter.put(tag);
             }
 
             return ResponseEntity.ok(String.join("", domain, tag));
@@ -106,7 +106,7 @@ public class ShortUrlController {
     @GetMapping("/{tag}")
     public ResponseEntity getUrl(@PathVariable String tag) {
 
-        if (bloomTagFilter.mightContain(tag)) {
+        if (bloomFilter.mightContain(tag)) {
             final Optional<ShortUrl> shortUrl = shortUrlService.getByTag(tag);
 
             if (!shortUrl.isPresent()) {
@@ -132,4 +132,11 @@ public class ShortUrlController {
 
     }
 
+    @GetMapping("/cache/stats")
+    public Object getCacheStats() throws IllegalAccessException, NoSuchMethodException, InvocationTargetException {
+        HashMap<String, Object> map = new HashMap();
+        map.put("stats", localCache.stats().toString());
+        map.put("size", localCache.size());
+        return map;
+    }
 }

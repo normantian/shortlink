@@ -17,5 +17,5 @@ public interface ShortUrlService {
 
     Optional<ShortUrl> getByTag(String tag);
 
-    Optional<List<String>> getAllTags();
+    Optional<List<ShortUrl>> getAllTags();
 }

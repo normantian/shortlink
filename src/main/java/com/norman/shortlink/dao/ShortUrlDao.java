@@ -51,9 +51,9 @@ public class ShortUrlDao {
         return Optional.of(shortUrl);
     }
 
-    public Optional<List<String>> getAllTags() {
+    public Optional<List<ShortUrl>> getAllTags() {
 
-        final List<String> list = namedParameterJdbcTemplate.queryForList("SELECT tag FROM short_url", new HashMap<>(), String.class);
+        final List<ShortUrl> list = namedParameterJdbcTemplate.query("SELECT * FROM short_url", rowMapper);
 
         return Optional.of(list);
     }
