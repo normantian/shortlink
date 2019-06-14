@@ -20,7 +20,7 @@ public class GuavaCacheConfig {
     @Bean(name = "localCache")
     public Cache<String,String> guavaCache(@Value("${service.localCacheSize:50}") long localCacheSize){
         final Cache<String, String> cache = CacheBuilder.newBuilder()
-                .expireAfterAccess(10, TimeUnit.MINUTES)
+                .expireAfterAccess(1, TimeUnit.MINUTES)
                 .maximumSize(localCacheSize)
                 .recordStats()
                 .build();

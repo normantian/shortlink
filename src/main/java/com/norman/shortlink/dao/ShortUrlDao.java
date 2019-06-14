@@ -24,9 +24,6 @@ import java.util.Optional;
 public class ShortUrlDao {
 
     @Autowired
-    private JdbcTemplate jdbcTemplate;
-
-    @Autowired
     private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 
     private BeanPropertyRowMapper<ShortUrl> rowMapper = new BeanPropertyRowMapper<ShortUrl>(ShortUrl.class) {
